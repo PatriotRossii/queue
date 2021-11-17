@@ -1,11 +1,11 @@
 #pragma once
 
-#include <forward_list>
+#include <list>
 #include "queue.hpp"
 
 template<typename T>
 class list_queue: queue<T> {
-	std::forward_list<T> list;
+	std::list<T> list;
 public:
 	void enqueue(const T& value) override {
 		list.push_back(value);
